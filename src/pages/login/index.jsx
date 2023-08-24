@@ -30,7 +30,6 @@ export default function Login() {
 
   // Funcion que maneja el submit
   function login(payload) {
-    console.log("hola submit");
     authService.login(payload).then(
       (res) => {
         if (res.error) return;
