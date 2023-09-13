@@ -11,6 +11,7 @@ import {
   setToken,
   setRefreshToken,
 } from "@/store/reducers/user/userSlice";
+import LoginLayout from "@/components/layouts/LoginLayout";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -128,3 +129,7 @@ export default function Login() {
     </div>
   );
 }
+
+Login.getLayout = function getLayout(page) {
+  return (<LoginLayout>{page}</LoginLayout>);
+};
