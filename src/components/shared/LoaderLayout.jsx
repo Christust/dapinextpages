@@ -27,8 +27,6 @@ export default function LoaderLayout({ children }) {
     });
     if (!user.profile) {
       router.push("/login");
-    } else {
-      router.push("/dashboard");
     }
   }, []);
   return (

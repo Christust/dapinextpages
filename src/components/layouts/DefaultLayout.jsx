@@ -5,7 +5,7 @@ export default function DefaultLayout({ children }) {
     <>
       <Navbar />
       <main className="mainContent">{children}</main>
-      <footer className="footerContent">Footer</footer>
+      <footer className="footerContent">Made by MODERATOREM</footer>
     </>
   );
 }
