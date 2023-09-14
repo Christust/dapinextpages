@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { routes } from "@/constants/routesConstants";
 
 export default function Navbar() {
   return (
@@ -11,57 +12,22 @@ export default function Navbar() {
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarColor02"
-          aria-controls="navbarColor02"
+          data-bs-target="#navbar"
+          aria-controls="navbar"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarColor02">
+        <div className="collapse navbar-collapse" id="navbar">
           <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <Link className="nav-link active" href="/">
-                Inicio
-                <span className="visually-hidden">(current)</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/users">
-                Usuarios
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="/about">
-                Acerca de...
-              </Link>
-            </li>
-            <li className="nav-item dropdown">
-              <span
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Inventario
-              </span>
-              <div className="dropdown-menu">
-                <Link className="dropdown-item" href="#">
-                  Action
+            {routes.map((route) => (
+              <li className="nav-item">
+                <Link className="nav-link" href={route.route}>
+                  {route.name}
                 </Link>
-                <Link className="dropdown-item" href="#">
-                  Another action
-                </Link>
-                <Link className="dropdown-item" href="#">
-                  Something else here
-                </Link>
-                <div className="dropdown-divider"></div>
-                <Link className="dropdown-item" href="#">
-                  Separated link
-                </Link>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

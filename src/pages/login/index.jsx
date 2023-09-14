@@ -13,7 +13,7 @@ import {
 } from "@/store/reducers/user/userSlice";
 import LoginLayout from "@/components/layouts/LoginLayout";
 
-export default function Login() {
+export default function LoginPage() {
   const dispatch = useDispatch();
   const router = useRouter();
   const user = useSelector((state) => state.user);
@@ -130,6 +130,6 @@ export default function Login() {
   );
 }
 
-Login.getLayout = function getLayout(page) {
+LoginPage.getLayout = function getLayout(page) {
   return (<LoginLayout>{page}</LoginLayout>);
 };
