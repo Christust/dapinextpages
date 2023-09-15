@@ -7,14 +7,14 @@ const routes = [
     route: "/dashboard",
     name: "Panel",
   },
-  {
-    route: "/users",
-    name: "Usuarios",
-  },
-  {
-    route: "/store",
-    name: "Inventario",
-  },
+  // {
+  //   route: "/users",
+  //   name: "Usuarios",
+  // },
+  // {
+  //   route: "/store",
+  //   name: "Inventario",
+  // },
   {
     route: "/about",
     name: "Acerca de...",
