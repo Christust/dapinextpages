@@ -4,9 +4,17 @@ import ReduxProvider from "@/store/provider";
 import LoaderLayout from "@/components/shared/LoaderLayout";
 import Script from "next/script";
 import DefaultLayout from "@/components/layouts/DefaultLayout";
+import SidebarLayout from "@/components/layouts/SidebarLayout";
 export default function App({ Component, pageProps }) {
+  const sidebar = true;
   const getLayout =
-    Component.getLayout || ((page) => <DefaultLayout>{page}</DefaultLayout>);
+    Component.getLayout ||
+    ((page) =>
+      sidebar ? (
+        <SidebarLayout>{page}</SidebarLayout>
+      ) : (
+        <DefaultLayout>{page}</DefaultLayout>
+      ));
   return (
     <ReduxProvider>
       <LoaderLayout>
