@@ -1,12 +1,12 @@
 const routes = [
   {
     route: "/",
-    name: "Inicio",
+    name: "Home",
     icon: "fa-solid fa-house",
   },
   {
     route: "/dashboard",
-    name: "Panel",
+    name: "Dashboard",
     icon: "fa-solid fa-chart-line",
   },
   // {
@@ -19,7 +19,7 @@ const routes = [
   // },
   {
     route: "/about",
-    name: "Acerca de...",
+    name: "About",
     icon: "fa-solid fa-circle-question",
   },
 ];
