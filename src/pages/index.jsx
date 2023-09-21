@@ -2,17 +2,64 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 export default function HomePage() {
+  const frontendTecnologies = [
+    "Nextjs - React",
+    "Redux",
+    "Bootstrap",
+    "Axios",
+    "Yup",
+    "Formik",
+    "Fontawesome",
+    "Authgrads",
+  ];
+  const backendTecnologies = [
+    "Django",
+    "DjangoRestFramework",
+    "SimpleJWT",
+    "Swagger",
+    "Sistema de autenticación",
+    "CRUDs completos",
+  ];
   return (
     <>
       <main>
         <div>
-          <h5>Me presento: mi nombre es Christos Marroquin.</h5>
           <p>
-            Soy un promagramdor fullstack poco mas que junior a mi parecer, el
-            cual tiene por objetivo seguirse capacitando en mi stack de
-            tecnologias asi como en las nuevas que puedan representar nuevas
-            oportunidades.
+            Este proyecto fue construido con la intención de que sirviera de
+            practica para la implementación de diferentes tecnologias y
+            herramientas de una forma concentrada.
           </p>
+          <div className="d-flex justify-content-around my-5">
+            <div className="card shadow p-3 col-5">
+              <div className="card-body">
+                <h5 className="card-title">Frontend</h5>
+                <p className="card-text">
+                  Para el frontend hasta el momento se esta utilizando lo
+                  siguiente:
+                </p>
+                <ul>
+                  {frontendTecnologies.map((tecnologie) => (
+                    <li key={tecnologie}>{tecnologie}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="card shadow p-3 col-5">
+              <div className="card-body">
+                <h5 className="card-title">Backend</h5>
+                <p className="card-text">
+                  Para el backend hasta el momento se esta utilizando lo
+                  siguiente:
+                </p>
+                <ul>
+                  {backendTecnologies.map((tecnologie) => (
+                    <li key={tecnologie}>{tecnologie}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-6">
           <Carousel

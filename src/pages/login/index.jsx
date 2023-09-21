@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-import authService from "@/services/authService";
+import authService from "@/services/factories/authService";
 import {
   setUser,
   setToken,
@@ -131,5 +131,5 @@ export default function LoginPage() {
 }
 
 LoginPage.getLayout = function getLayout(page) {
-  return (<LoginLayout>{page}</LoginLayout>);
+  return <LoginLayout>{page}</LoginLayout>;
 };
