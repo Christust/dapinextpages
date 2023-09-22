@@ -11,7 +11,7 @@ export default function DefaultLayout({ children }) {
       <div className="sideMainContainer mainContainer">
         <header>
           <h3>
-            {routes.filter((route) => route.route === router.route)[0].name}
+            {routes.filter((route) => route.route === router.route)[0]?.name}
           </h3>
           <hr />
         </header>
