@@ -61,7 +61,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="col-6">
+        {/* <div className="col-6">
           <Carousel
             centerMode={true}
             centerSlidePercentage="100"
@@ -76,7 +76,7 @@ export default function HomePage() {
               <img width={400} height={400} src="next-white.png" />
             </div>
           </Carousel>
-        </div>
+        </div> */}
       </main>
     </>
   );
