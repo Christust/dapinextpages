@@ -10,14 +10,9 @@ export default function DashboardPage() {
   };
 
   function getUsers() {
-    userServices.getUsers().then(
-      (res) => {
-        setUsers(res.data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    userServices.getUsers().then((res) => {
+      setUsers(res.data);
+    });
   }
   useEffect(() => {
     getUsers();
@@ -26,7 +21,7 @@ export default function DashboardPage() {
     <>
       <h1>Lista de usuarios</h1>
       <div className="card shadow p-3">
-        <table class="table table-striped">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th scope="col">CURP</th>
@@ -36,7 +31,7 @@ export default function DashboardPage() {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
+            {users?.map((user) => (
               <tr key={user.id}>
                 <td>{user.curp ? user.curp : "N/A"}</td>
                 <td>{user.name}</td>

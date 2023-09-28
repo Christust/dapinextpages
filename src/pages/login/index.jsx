@@ -31,20 +31,16 @@ export default function LoginPage() {
 
   // Funcion que maneja el submit
   function login(payload) {
-    authService.login(payload).then(
-      (res) => {
-        if (res.error) return;
-        if (res.data?.user) {
-          dispatch(setUser(res.data.user));
-          dispatch(setToken(res.data.token));
-          dispatch(setRefreshToken(res.data.refresh_token));
-          router.push("/");
-        }
-      },
-      (error) => {
-        console.log(error);
+    authService.login(payload).then((res) => {
+      if (res.error) return;
+      if (res.data?.user) {
+        console.log(res);
+        dispatch(setUser(res.data.user));
+        dispatch(setToken(res.data.token));
+        dispatch(setRefreshToken(res.data.refresh));
+        router.push("/");
       }
-    );
+    });
   }
 
   // Validar Form

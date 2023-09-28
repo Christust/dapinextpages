@@ -8,6 +8,6 @@ export default {
     return axios.post("logout/", payload);
   },
   refreshToken(payload) {
-    return axios.post("api/token/refresh/", payload);
+    return axios.post("token/refresh/", payload);
   },
 };

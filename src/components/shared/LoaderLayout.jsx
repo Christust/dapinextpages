@@ -5,12 +5,14 @@ import store from "@/store";
 
 const Loader = () => {
   return (
-    <div className="d-flex justify-content-center">
-      <div className="spinner-border loader" role="status">
-        <span className="visually-hidden">Loading...</span>
+    <>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border loader" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+        <div className="modal-backdrop best_zind"></div>
       </div>
-      <div className="modal-backdrop best_zind"></div>
-    </div>
+    </>
   );
 };
 
@@ -30,9 +32,9 @@ export default function LoaderLayout({ children }) {
     }
   }, []);
   return (
-    <div>
+    <>
       {children}
       {loader > 0 && <Loader />}
-    </div>
+    </>
   );
 }
