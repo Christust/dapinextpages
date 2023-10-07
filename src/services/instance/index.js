@@ -4,6 +4,7 @@ import store from "../../store";
 import { setLoaderCount } from "../../store/reducers/loader/loaderSlice";
 import { setToken, setRefreshToken } from "@/store/reducers/user/userSlice";
 import authService from "../factories/authService";
+import { logOut } from "@/helpers/auth";
 
 const instance = axios.create({
   baseURL: "https://daapi-53223c26c4dc.herokuapp.com/",
@@ -31,17 +32,23 @@ instance.interceptors.response.use(
     console.log(payload);
     console.log(error);
     if (error.response?.data?.code == "token_not_valid") {
-      authService.refreshToken(payload).then((res) => {
-        console.log(res);
-        store.dispatch(setToken(res.data.access));
-        store.dispatch(setRefreshToken(res.data.refresh));
-        window.location.reload(true);
-      });
-      swal({
-        text: "Token no valido",
-        icon: "error",
-      });
-      // localStorage.removeItem("state");
+      if (error.config.url !== "token/refresh/") {
+        authService
+          .refreshToken(payload)
+          .then((res) => {
+            console.log(res);
+            store.dispatch(setToken(res.data.access));
+            store.dispatch(setRefreshToken(res.data.refresh));
+            window.location.reload(true);
+          })
+          .catch(() => {
+            swal({
+              text: "Token no valido",
+              icon: "error",
+            });
+            logOut();
+          });
+      }
     } else {
       swal({
         text: "Error!",

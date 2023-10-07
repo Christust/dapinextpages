@@ -10,9 +10,11 @@ export default function DashboardPage() {
   };
 
   function getUsers() {
-    userServices.getUsers().then((res) => {
-      setUsers(res.data);
-    });
+    if (typeof window !== "undefined") {
+      userServices.getUsers().then((res) => {
+        setUsers(res.data);
+      });
+    }
   }
   useEffect(() => {
     getUsers();

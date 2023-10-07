@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { routes } from "@/constants/routesConstants";
+import { logOut } from "@/helpers/auth";
 
 export default function Navbar() {
   return (
@@ -24,7 +25,10 @@ export default function Navbar() {
           </div>
         ))}
         <div className="sidebar__sidebarRouteContainer">
-          <a className="sidebar__sidebarRoute sidebar__sidebarRoute--button">
+          <a
+            onClick={logOut}
+            className="sidebar__sidebarRoute sidebar__sidebarRoute--button"
+          >
             <i className="fa-solid fa-door-open me-3"></i>
             <span>Logout</span>
           </a>
