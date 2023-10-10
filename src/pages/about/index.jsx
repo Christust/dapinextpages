@@ -43,17 +43,32 @@ export default function AboutPage() {
     <>
       <main>
         <div>
-          <div className="mb-3">
-            <h5>Christos Marroquin.</h5>
+          <div className="mb-5">
+            <h5>Christos Osvaldo Marroquin Valdez.</h5>
+            <h6>Programador Fullstack.</h6>
+            <h6>Tel: 8126321225.</h6>
+            <hr />
+            <h5>Descripción.</h5>
             <p className="textJustified">
               Soy un programador fullstack poco mas que junior a mi parecer,
               tengo por objetivo seguirme capacitando en mi stack de tecnologias
               asi como en las nuevas herramientas que puedan surgir y
-              representen nuevas oportunidades.
+              representen nuevas oportunidades. Mi stack de tecnologias lo
+              intento mantener en constante desarollo y practica cada que tengo
+              la oportunidad, asi como el realizar proyectos con nuevos stacks
+              tanto de frontend como de backend en mi tiempo libre.
             </p>
           </div>
-          <div className="mb-3">
+          <div className="mb-5">
+            <h5>Portafolio</h5>
+            <hr />
+            <a href="https://github.com/Christust">
+              https://github.com/Christust
+            </a>
+          </div>
+          <div className="mb-5">
             <h5>Experiencia</h5>
+            <hr />
             <p className="textJustified">
               Eh participado en proyectos tanto de Frontend como de Backend.
             </p>
@@ -75,7 +90,7 @@ export default function AboutPage() {
               sean personales y laborales):
             </p>
           </div>
-          <div className="row justify-content-around mb-3">
+          <div className="row justify-content-around mb-5">
             <div className="col-12">
               <h6 className="m-0">
                 <b>Frontend</b>
@@ -138,16 +153,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="mb-3">
-            <h5>Portafolio</h5>
-            <a href="https://github.com/Christust">
-              https://github.com/Christust
-            </a>
-          </div>
-          <div>
-            <h5>Contacto</h5>
-            <span>0448126321225</span>
           </div>
         </div>
       </main>
