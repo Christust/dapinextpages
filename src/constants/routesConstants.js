@@ -19,7 +19,7 @@ const routes = [
   // },
   {
     route: "/about",
-    name: "About",
+    name: "Contacto",
     icon: "fa-solid fa-circle-question",
   },
 ];
