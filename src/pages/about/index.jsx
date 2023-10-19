@@ -96,7 +96,7 @@ export default function AboutPage() {
                 <b>Frontend</b>
               </h6>
               <div className="d-flex justify-content-around my-4">
-                <div className="card shadow p-3 col-5">
+                <div className="card cardGradient shadow p-3 col-5">
                   <div className="card-body">
                     <h5 className="card-title">Laborales</h5>
                     <div className="card-text">
@@ -108,7 +108,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
-                <div className="card shadow p-3 col-5">
+                <div className="card cardGradient shadow p-3 col-5">
                   <div className="card-body">
                     <h5 className="card-title">Personales</h5>
                     <div className="card-text">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 <b>Backend</b>
               </h6>
               <div className="d-flex justify-content-around my-4">
-                <div className="card shadow p-3 col-5">
+                <div className="card cardGradient shadow p-3 col-5">
                   <div className="card-body">
                     <h5 className="card-title">Laborales</h5>
                     <div className="card-text">
@@ -139,7 +139,7 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </div>
-                <div className="card shadow p-3 col-5">
+                <div className="card cardGradient shadow p-3 col-5">
                   <div className="card-body">
                     <h5 className="card-title">Personales</h5>
                     <div className="card-text">

@@ -7,7 +7,7 @@ import authService from "../factories/authService";
 import { logOut } from "@/helpers/auth";
 
 const instance = axios.create({
-  baseURL: "https://daapi-53223c26c4dc.herokuapp.com/",
+  baseURL: "http://127.0.0.1:8000/",
   timeout: 5000,
 });
 

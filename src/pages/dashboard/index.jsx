@@ -21,29 +21,27 @@ export default function DashboardPage() {
   }, []);
   return (
     <>
-      <h1>Lista de usuarios</h1>
-      <div className="card shadow p-3">
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">CURP</th>
-              <th scope="col">Name</th>
-              <th scope="col">Lastname</th>
-              <th scope="col">User Type</th>
+      <h5>Lista de usuarios</h5>
+      <table className="table patientsHeadClass table-striped">
+        <thead>
+          <tr>
+            <th scope="col">CURP</th>
+            <th scope="col">Name</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">User Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users?.map((user) => (
+            <tr key={user.id}>
+              <td>{user.curp ? user.curp : "N/A"}</td>
+              <td>{user.name}</td>
+              <td>{user.last_name}</td>
+              <td>{userTypes[user.user_type]}</td>
             </tr>
-          </thead>
-          <tbody>
-            {users?.map((user) => (
-              <tr key={user.id}>
-                <td>{user.curp ? user.curp : "N/A"}</td>
-                <td>{user.name}</td>
-                <td>{user.last_name}</td>
-                <td>{userTypes[user.user_type]}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }

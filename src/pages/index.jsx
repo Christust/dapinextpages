@@ -30,7 +30,7 @@ export default function HomePage() {
             herramientas de una forma concentrada.
           </p>
           <div className="d-flex justify-content-around my-5">
-            <div className="card shadow p-3 col-5">
+            <div className="card cardGradient shadow p-3 col-5">
               <div className="card-body">
                 <h5 className="card-title">Frontend</h5>
                 <p className="card-text">
@@ -45,7 +45,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="card shadow p-3 col-5">
+            <div className="card cardGradient shadow p-3 col-5">
               <div className="card-body">
                 <h5 className="card-title">Backend</h5>
                 <p className="card-text">

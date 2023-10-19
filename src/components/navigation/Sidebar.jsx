@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="sidebar__sidebarRouteContainer">
         <Link className="sidebar__sidebarRoute" href="/">
           <i className="fa-solid fa-microchip me-3"></i>
-          <h4 className="m-0">DAPI</h4>
+          <h4 className="text-white m-0">DAPI</h4>
         </Link>
         <hr />
       </div>
