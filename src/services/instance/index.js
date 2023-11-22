@@ -7,7 +7,7 @@ import authService from "../factories/authService";
 import { logOut } from "@/helpers/auth";
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: "http://moderatorem.pythonanywhere.com/",
   timeout: 5000,
 });
 
